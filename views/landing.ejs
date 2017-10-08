@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shuang Hu's Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- override some functions with latest bootstrap4, for grayscale functions -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+
+    <!-- About Me links -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="styles-6.css">
+    <link rel="stylesheet" href="/stylesheets/additionStyles.css">
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">LumiSite</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="/gallery">Gallery</a>
+                </li>
+                
+                <% if(!currentUser){ %>
+                      <li class="nav-item <%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a class="nav-link" href="/login"><i class="fa fa-user-circle fa-1x" aria-hidden="true"></i>   Login</a></li>
+                      <li class="nav-item <%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a class="nav-link" href="/register">Sign Up</a></li>
+                  <% } else { %>
+                      <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-user-circle fa-1x" aria-hidden="true"></i>   Welcome <%= currentUser.username %></a></li>
+                      <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                 <% } %>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h1 class="brand-heading">LumiSite</h1>
+              <p class="intro-text">A Web Developer and Landscape Photographer Portfolio</p>
+              <a href="#about" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    
+
+
+
+
+
+  <div class="wrapper" id="about">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile img-circle" src="assets/images/myphoto.jpg" alt="" />
+                <h1 class="name">Shuang Hu</h1>
+                <h3 class="tagline">Graduate Student in Computer Science</h3>
+            </div><!--//profile-container-->
+            
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto: shuanghu@usc.edu">shuanghu@usc.edu</a></li>
+                    <li class="phone"><i class="fa fa-phone"></i><a href="tel:(213) 421-7233">(213) 421-7233</a></li>
+                    <li class="website"><i class="fa fa-globe"></i><a href="http://www.hu-shuang.com" target="_blank">hu-shuang.com</a></li>
+                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/shuang-hu" target="_blank">linkedin.com/in/shuang-hu</a></li>
+                    <li class="github"><i class="fa fa-github"></i><a href="https://github.com/shuanghux" target="_blank">github.com/shuanghux</a></li>
+                </ul>
+            </div><!--//contact-container-->
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Education</h2>
+                <div class="item">
+                    <h4 class="degree">University of Southern California</h4>
+                    <h5 class="meta">MS in Computer Science</h5>
+                    <div class="time">May 2019(expected)</div>
+                </div><!--//item-->
+                <div class="item">
+                    <h4 class="degree">University of Liverpool</h4>
+                    <h5 class="meta">BEng in Electric and Electronic Engineering with Honour (1st Class)</h5>
+                    <div class="time">2015 - 2017</div>
+                </div><!--//item-->
+                <div class="item">
+                    <h4 class="degree">Xi'an Jiaotong Liverpool University</h4>
+                    <h5 class="meta">BEng in Electrical Engineering with Honour (1st Class)</h5>
+                    <div class="time">2013 - 2015</div>
+                </div><!--//item-->
+            </div><!--//education-container-->
+            
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Languages</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>Chinese <span class="lang-desc">(Native)</span></li>
+                    <li>English <span class="lang-desc">(Professional)</span></li>
+                </ul>
+            </div>
+            
+            
+            
+        </div><!--//sidebar-wrapper-->
+        
+        <div class="main-wrapper">
+            
+
+            
+            <section class="section experiences-section">
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Projects</h2>
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Personal Homepage with Content Sharing</h3>
+                            <div class="time">Sept. 2017 - Oct. 2017</div>
+                            <!-- <div class="time">2015 - Present</div> -->
+                        </div><!--//upper-row-->
+                        <div class="company">Personal Project</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Developed Full Stack RESTful website using Node.js(Express) framework</p>
+                        <p>Implemented database function using MongoDB, allowing multi-user access/publish/edit content</p>
+                        <p>Designed responsive Front-End UI with Bootstrap and HTML/CSS/Javascript/JQuery</p>
+                        <p>Utilized Passport middleware for user authentication</p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Parameter Estimation for Self-Balancing Robot</h3>
+                            <div class="time">Sept. 2016 - Apr. 2017</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Research Assistant</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Designed the mechanical structure of segway and bollbot robot using LEGO components</p>
+                        <p>Finely Tuned PID control system with LQR optimized (Implemented in Python on Linux Robot OS).</p>  
+                        <p>Kalman Filter designed for noise reduction.</p>
+                        <p>Extended current Expectation Maximization algorithm for Parameter Estimation based on robot behaviour that involving control input effect</p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Face Recognition System</h3>
+                            <div class="time">Dec. 2015 - Mar. 2016</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Research Assistant</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Designed a system which is able to locate, extract, identify and recognize human face.</p>
+                        <p>Adapted Viola-Jones algorithm and Cascade classifier for Detection.</p>
+                        <p>Applied KLT algorithm for face tracking and Principle Component Analysis (PCA) for recognizing.</p>
+                        <p>Implemented a database system to manage feature data.</p>
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+            </section><!--//section-->
+            
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-archive"></i>Mini-Apps</h2>
+                <div class="intro">
+                    <p>Below are tiny web application demos</p>
+                </div><!--//intro-->
+                <div class="item">
+                    <span class="project-title"><a href="#">RGB Colour Game</a></span> - <span class="project-tagline">A javascript web application that showing several blocks with randomly generated RGB value. Users are required to select corresponding block with a given RGB value.</span>
+                    
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="#" target="_blank">PATATAP</a></span> - 
+                    <span class="project-tagline">Clone of patatap.com, utilizing HTML5 canvas and jQuery for generating animation and corresponding sound when press certain keys.</span>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/" target="_blank">ToDo List Widget</a></span> - <span class="project-tagline">A basic web based todo list application</span>
+                </div><!--//item-->
+                
+            </section><!--//section-->
+            
+            <section class="skills-section section">
+                <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+                <div class="skillset">        
+                    <div class="item">
+                        <h3 class="level-title">Java</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="90%">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">Matlab</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="90%">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                    
+                    <div class="item">
+                        <h3 class="level-title">NodeJS &amp; jQuery</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="70%">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                    
+                    <div class="item">
+                        <h3 class="level-title">HTML &amp; CSS</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="70%">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                    
+                    <div class="item">
+                        <h3 class="level-title">MongoDB &amp; MySql</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="40%">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                    <div class="item">
+                        <h3 class="level-title">PHP</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="40%">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                    
+                    
+                    
+                    <div class="item">
+                        <h3 class="level-title">Photoshop &amp; After Effects</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="60%">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                    
+                </div>  
+            </section><!--//skills-section-->
+
+            <section class="section courses-section">
+                <h2 class="section-title"><i class="fa fa-book"></i>Computer Science Related Courses taken</h2>
+                <div class="Courses">
+                    <ul>
+                        <li>Data Structures</li>
+                        <li>Web Technologies</li>
+                        <li>Computer Networks</li>
+                        <li>Machine Learning</li>
+                        <li>Image Processing</li>
+                        <li>Neural Networks</li>
+                        <li>Embedded Computer Systems</li>
+                        <li>Introduction to Programming Systems Design</li>
+                        <li>C/C++ Programming and Software Engineering</li>
+
+                    </ul>
+                    <br>
+                </div><!--//summary-->
+            </section><!--//section-->
+            
+        </div><!--//main-body-->
+    </div>
+
+    <!-- Download Section -->
+    
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact Start Bootstrap</h2>
+            <p>Feel free to leave us a comment on the
+              <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a>
+              on Start Bootstrap to give some feedback about this theme!</p>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">Github</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                  <span class="network-name">Google+</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; Shuang Hu 2017</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChLaEiiqiT1Vl3WuGh5Zg7lzxHiGgu_xQ&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.js"></script>
+
+    <!-- About me custom js -->
+    <script type="text/javascript" src="assets/js/main.js"></script>       
+
+  </body>
+
+</html>

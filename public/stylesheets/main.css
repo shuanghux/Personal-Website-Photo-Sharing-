@@ -1,0 +1,38 @@
+.thumbnail img {
+    margin:auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 800px;
+    
+}
+
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.img_container {
+    height: 60%;
+}
+
+#landing_header {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://image.ibb.co/cnZcvb/DSC_3607.jpg);
+}
+
