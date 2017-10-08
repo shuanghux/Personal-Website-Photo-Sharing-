@@ -10,10 +10,12 @@ var Comment = require("./models/comments");
 var seedDB = require("./seeds");
 var methodOverride = require("method-override");
 var flash = require("connect-flash");
-mongoose.connect("mongodb://sunwho707:twentyfour94@ds113775.mlab.com:13775/lumisite", {useMongoClient: true});
+var dburl = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(dburl, {useMongoClient: true});
 //seedDB();
 // mongodb://sunwho707:twentyfour94@ds113775.mlab.com:13775/lumisite
 // mongodb://localhost/yelp_camp
+
 
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");

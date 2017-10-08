@@ -112,9 +112,9 @@
     var lng = <%= campground.lng %>;
     var center = {lat: lat, lng: lng };
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
+        zoom: 18,
         center: center,
-        scrollwheel: false
+        scrollwheel: true
     });
     var contentString = `
       <strong><%= campground.name %><br />
