@@ -61,7 +61,14 @@
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="/gallery">Gallery</a>
                 </li>
-  
+                <li class="nav-item dropdown">
+                  <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Demo
+                  </a>
+                  <ul class="dropdown-menu" style="background:black">
+                    <li> <a href="/PATATAP">PATATAP</a></li>
+                    <li> <a href="/colorgame">RGB Color Game</a></li>
+                  </ul>
+                </li>
                 <% if(!currentUser){ %>
                       <li class="nav-item <%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a class="nav-link" href="/login"><i class="fa fa-user-circle fa-1x" aria-hidden="true"></i>   Login</a></li>
                       <li class="nav-item <%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a class="nav-link" href="/register">Sign Up</a></li>
