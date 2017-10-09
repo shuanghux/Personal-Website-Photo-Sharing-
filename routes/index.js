@@ -60,6 +60,12 @@ router.get("/logout", function(req, res) {
 });
 
 
+router.get("/patatap", function(req, res) {
+    res.render("games/PATATAP");
+})
 
+router.get("/colorgame", function(req, res) {
+    res.render("games/colorgame");
+})
 
 module.exports = router;

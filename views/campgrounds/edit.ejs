@@ -9,10 +9,10 @@
         <div style="width:30%; margin:0 auto">
             <form action="/gallery/<%=campground._id%>/?_method=PUT" method="POST">
                 <div class="form-group">
-                    <input type = "text" value="<%=campground.name%>" name="name" class="form-control">
+                    <input type = "text" value="<%=campground.name%>" name="name" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <input type = "text" value="<%=campground.img%>" name="img" class="form-control">
+                    <input type = "text" value="<%=campground.img%>" name="img" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <input type = "text" value="<%=campground.description%>" name="description" class="form-control">
@@ -20,7 +20,7 @@
                 
                 <div class="form-group">
                     <label for="location">Location</label>
-                    <input class="form-control" type="text" name="location" id="location" value="<%= campground.location %>">
+                    <input class="form-control" type="text" name="location" id="location" value="<%= campground.location %>" required>
                 </div>
                 <div class="form-group">
                     <input type = "submit" value="Submit" class="btn btn-lg btn-default btn-block">

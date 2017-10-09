@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="/stylesheets/additionStyles.css">
         <!--New Style End-->
         <!--layout-->
-        
+        <link rel="stylesheet" type="text/css" href="/stylesheets/colorGame.css">
         
         
     </head>
@@ -48,7 +48,7 @@
               <i class="fa fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto nav navbar">
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="/">Home</a>
                 </li>
@@ -58,14 +58,7 @@
                 <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="/gallery">Gallery</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Demo
-                  </a>
-                  <ul class="dropdown-menu" style="background:black">
-                    <li> <a href="/PATATAP">PATATAP</a></li>
-                    <li> <a href="/colorgame">RGB Color Game</a></li>
-                  </ul>
-                </li>
+  
                 <% if(!currentUser){ %>
                       <li class="nav-item <%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a class="nav-link" href="/login"><i class="fa fa-user-circle fa-1x" aria-hidden="true"></i>   Login</a></li>
                       <li class="nav-item <%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a class="nav-link" href="/register">Sign Up</a></li>
@@ -78,16 +71,7 @@
           </div>
         </nav>
         
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
         <div class="container">
             <% if (success && success.length>0) { %>
                 <div class="alert alert-success" role="alert">
@@ -101,6 +85,116 @@
                 </div>
             <% } %>
         </div>
+
+        <div class="container" style="margin-top:0;">
+            
+            
         
         
-        <div class="container" style="margin-top:30px;">
+        
+        
+        
+        <!--Content start-->
+        
+        
+            <h1>The Great RGB <br><span id="colorValueDisplay"></span> <br>Color Game</h1>
+    
+    
+            <dir id="bar">
+            	<div id="navContainer">
+            		<span id="firstButton"><button id="resetButton">New Colors</button></span>
+            	
+            		<span id="resultMessage"> </span>
+            		<span id="buttons">
+            			<button id="easyButton">Easy</button>
+            			<button id="mediumButton">Medium</button>
+            			<button id="hardButton" class="selected">Hard</button>
+            		</span>
+            	</div>
+            	
+            </dir>
+            <div id="container">
+            	<div class="squares"></div>
+            	<div class="squares"></div>
+            	<div class="squares"></div>
+            	<div class="squares"></div>
+            	<div class="squares"></div>
+            	<div class="squares"></div>
+            	<div class="squares"></div>
+            	<div class="squares"></div>
+            	<div class="squares"></div>
+            </div>
+        
+        
+        
+        <!--Content end-->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div> <!-- body container-->
+        <!-- jQuery CDN -->
+        <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+        
+        <!-- Bootstrap JS CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        
+        
+        <footer>
+          <div class="container text-center">
+            <p>Copyright &copy; Shuang Hu 2017</p>
+          </div>
+        </footer>
+    
+        <!-- Bootstrap core JavaScript -->
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/popper/popper.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+        <!-- Plugin JavaScript -->
+        <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    
+        <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChLaEiiqiT1Vl3WuGh5Zg7lzxHiGgu_xQ&sensor=false"></script>
+    
+        <!-- Custom scripts for this template -->
+        <!--<script src="js/grayscale.js"></script>-->
+    
+        <!-- About me custom js -->
+        <script type="text/javascript" src="/assets/js/main.js"></script> 
+        <!--layout script-->
+        <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
+        <script type="text/javascript" src="/stylesheets/packery.js"></script> 
+        <script type="text/javascript" src="/stylesheets/colorGame.js"></script>
+    </body>
+</html>
